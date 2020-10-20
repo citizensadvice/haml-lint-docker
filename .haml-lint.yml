@@ -1,0 +1,49 @@
+linters:
+  LineLength:
+    max: 140
+
+  ClassesBeforeIds:
+    EnforcedStyle: "id"
+
+  ConsecutiveSilentScripts:
+    enabled: false
+    # We do not feel this rule results in cleaner code
+
+  IdNames:
+    enabled: false
+    # TODO: Fix and re-enable
+
+  InstanceVariables:
+    enabled: false
+    # TODO: Fix and re-enable
+
+  ViewLength:
+    enabled: false
+    # This is recorded on line 0, which means it can't be disabled in a file and doesn't play nicely with editors
+
+  RuboCop:
+    ignored_cops:
+      # TODO: Remove when haml-lint fixed Layout/LineLength (Rubocop 0.78.0)
+      - Lint/BlockAlignment
+      - Lint/EndAlignment
+      - Lint/Void
+      - Layout/AlignHash # renamed to Layout/HashAlignment in rubocop 0.77
+      - Layout/AlignParameters # renamed to Layout/ParameterAlignment in rubocop 0.77
+      - Layout/CaseIndentation
+      - Layout/ElseAlignment
+      - Layout/EndOfLine
+      - Layout/HashAlignment
+      - Layout/IndentationWidth
+      - Layout/ParameterAlignment
+      - Layout/TrailingBlankLines # renamed to Layout/TrailingEmptyLines in rubocop 0.77
+      - Layout/TrailingEmptyLines
+      - Layout/TrailingWhitespace
+      - Metrics/BlockLength
+      - Metrics/BlockNesting
+      - Metrics/LineLength
+      - Layout/LineLength # rename of Metrics/LineLength
+      - Naming/FileName
+      - Style/FrozenStringLiteralComment
+      - Style/IfUnlessModifier
+      - Style/Next
+      - Style/WhileUntilModifier
